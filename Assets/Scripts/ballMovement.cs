@@ -13,7 +13,7 @@ public class ballMovement : MonoBehaviour
         
         RB = GetComponent<Rigidbody>();
         transform.position = new Vector3(0, 3, 0);
-        RB.AddForce(new Vector3(0, -0.5f, 0));
+        RB.AddForce(new Vector3(0, -0.1f, 0));
 
     }
 
@@ -23,7 +23,15 @@ public class ballMovement : MonoBehaviour
         
         float speed = 4;
         RB.velocity = RB.velocity.normalized * speed;
-    
+
+
+        if (transform.position.y < 0.8f)
+        {
+            
+            transform.position = new Vector3(0, 4, 0);
+        
+        }
+
     }
 
 }
