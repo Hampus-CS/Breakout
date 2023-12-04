@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//HCS
 public class blockHit : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class blockHit : MonoBehaviour
         {
             
             Destroy(gameObject);
-        
+            
         }
 
     }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//HCS
 public class playerMovement : MonoBehaviour
 {
 
@@ -22,20 +22,20 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
         {
-                RB.AddForce(new Vector3(-5, 0, 0));
+                RB.AddForce(new Vector3(-10, 0, 0));
         }
         else if (Input.GetKey(KeyCode.A))
         {
-                RB.AddForce(new Vector3(-2.5f, 0, 0));
+                RB.AddForce(new Vector3(-5, 0, 0));
         }
 
         if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
         {
-            RB.AddForce(new Vector3(5, 0, 0));
+            RB.AddForce(new Vector3(10, 0, 0));
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            RB.AddForce(new Vector3(2.5f, 0, 0));
+            RB.AddForce(new Vector3(5, 0, 0));
         }
 
     }

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//HCS
-public class blockCollision : MonoBehaviour
+
+public class floorCollision : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,22 +15,21 @@ public class blockCollision : MonoBehaviour
     {
         
     }
-
     void OnCollisionEnter(Collision collision)
     {
 
         Debug.Log("Träff");
 
         GameObject otherGameObject = collision.gameObject;
-        blockHit hitBlock = otherGameObject.GetComponent<blockHit>();
+        ballMovement hitFloor = otherGameObject.GetComponent<ballMovement>();
 
-        if (hitBlock != null)
+        if (hitFloor != null)
         {
             
-            hitBlock.TakeDamage();
+            hitFloor.TakeDamage();
         
         }
-        
+
     }
 
 }

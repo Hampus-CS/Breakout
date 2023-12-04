@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//HCS
 public class ballMovement : MonoBehaviour
 {
 
     Rigidbody RB;
-    
+    int hp = 3;
+
     // Start is called before the first frame update
     void Start()
     {
         
         RB = GetComponent<Rigidbody>();
-        transform.position = new Vector3(0, 3, 0);
+        transform.position = new Vector3(0, 4, 0);
         RB.AddForce(new Vector3(0, -0.1f, 0));
 
     }
@@ -24,12 +25,22 @@ public class ballMovement : MonoBehaviour
         float speed = 4;
         RB.velocity = RB.velocity.normalized * speed;
 
+    }
+    
+    public void TakeDamage()
+    {
 
-        if (transform.position.y < 0.8f)
-        {
-            
-            transform.position = new Vector3(0, 4, 0);
+        hp -= 1;
+        transform.position = new Vector3(0, 4, 0);
+        RB.AddForce(new Vector3(0, -0.3f, 0));
         
+
+        if (hp == 0)
+        {
+
+            Destroy(gameObject);
+            //Game Over
+
         }
 
     }

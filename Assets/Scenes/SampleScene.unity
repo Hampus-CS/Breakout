@@ -1390,6 +1390,7 @@ GameObject:
   - component: {fileID: 260123573}
   - component: {fileID: 260123572}
   - component: {fileID: 260123571}
+  - component: {fileID: 260123574}
   - component: {fileID: 260123570}
   m_Layer: 0
   m_Name: Block-H7-L2
@@ -1484,6 +1485,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 284121658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &260123574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260123569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b9d9b0f75cf6404997654afdef45bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &284121657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,7 +1665,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 8
@@ -4674,6 +4687,7 @@ GameObject:
   - component: {fileID: 841569317}
   - component: {fileID: 841569316}
   - component: {fileID: 841569315}
+  - component: {fileID: 841569319}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -4767,6 +4781,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &841569319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841569314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0425a60e127a0ea4ea8bfb777125d801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851963102
 GameObject:
   m_ObjectHideFlags: 0
@@ -4971,7 +4997,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: -10}
+  m_LocalPosition: {x: 0, y: 6.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
