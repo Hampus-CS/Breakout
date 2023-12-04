@@ -20,22 +20,28 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
 
+    }
+
+    // Update is called on a fixed 60 frame cycle
+    void FixedUpdate()
+    {
+
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
         {
-                RB.AddForce(new Vector3(-10, 0, 0));
+                RB.AddForce(new Vector3(-25, 0, 0));
         }
         else if (Input.GetKey(KeyCode.A))
         {
-                RB.AddForce(new Vector3(-5, 0, 0));
+                RB.AddForce(new Vector3(-15, 0, 0));
         }
 
         if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
         {
-            RB.AddForce(new Vector3(10, 0, 0));
+            RB.AddForce(new Vector3(25, 0, 0));
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            RB.AddForce(new Vector3(5, 0, 0));
+            RB.AddForce(new Vector3(15, 0, 0));
         }
 
     }
