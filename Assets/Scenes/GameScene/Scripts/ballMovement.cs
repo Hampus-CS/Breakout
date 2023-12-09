@@ -6,7 +6,7 @@ public class ballMovement : MonoBehaviour
 {
 
     Rigidbody RB;
-    int hp = 3;
+    //int hp = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,9 @@ public class ballMovement : MonoBehaviour
 
     }
     
-    public void TakeDamage()
+
+
+    /**public void TakeDamage()
     {
 
         hp -= 1;
@@ -42,7 +44,6 @@ public class ballMovement : MonoBehaviour
             //Game Over
 
         }
-
-    }
-
+    */
+    
 }

@@ -15,7 +15,7 @@ public class floorCollision : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision collision)
+    /**void OnCollisionEnter(Collision collision)
     {
 
         Debug.Log("Träff");
@@ -31,5 +31,5 @@ public class floorCollision : MonoBehaviour
         }
 
     }
-
+    */
 }
