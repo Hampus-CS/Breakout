@@ -6,7 +6,23 @@ public class ballMovement : MonoBehaviour
 {
 
     Rigidbody RB;
-    //int hp = 3;
+    
+    int hp = 3;
+
+    [SerializeField]
+    private GameObject heart1;
+
+    [SerializeField]
+    private GameObject heart2;
+
+    [SerializeField]
+    private GameObject heart3;
+
+    [SerializeField]
+    private GameObject gameOver;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +31,10 @@ public class ballMovement : MonoBehaviour
         RB = GetComponent<Rigidbody>();
         transform.position = new Vector3(0, 4, 0);
         RB.AddForce(new Vector3(0, -0.1f, 0));
+        gameOver.active = false;
+
+
+
 
     }
 
@@ -26,24 +46,36 @@ public class ballMovement : MonoBehaviour
         RB.velocity = RB.velocity.normalized * speed;
 
     }
-    
 
-
-    /**public void TakeDamage()
+    public void TakeDamage()
     {
 
         hp -= 1;
-        transform.position = new Vector3(0, 4, 0);
-        RB.AddForce(new Vector3(0, -0.3f, 0));
-        
 
+        if (hp == 2)
+        {
+
+            Destroy(heart3);
+
+        }
+        if (hp == 1)
+        {
+
+            Destroy(heart2);
+
+        }
         if (hp == 0)
         {
 
+            Destroy(heart1);
             Destroy(gameObject);
-            //Game Over
+            gameOver.active = true;
 
         }
-    */
-    
+
+        transform.position = new Vector3(0, 4, 0);
+        RB.AddForce(new Vector3(0, -0.3f, 0));
+
+    }
+
 }
