@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 //HCS
+
 public class ballMovement : MonoBehaviour
 {
 
     Rigidbody RB;
     
     int hp = 3;
+
+    int blockDestroyed = 0;
 
     [SerializeField]
     private GameObject heart1;
@@ -21,8 +25,11 @@ public class ballMovement : MonoBehaviour
     [SerializeField]
     private GameObject gameOver;
 
+    [SerializeField]
+    private GameObject gameWin;
 
-
+    [SerializeField]
+    private TextMeshProUGUI blocksHitScore;
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +39,8 @@ public class ballMovement : MonoBehaviour
         transform.position = new Vector3(0, 4, 0);
         RB.AddForce(new Vector3(0, -0.1f, 0));
         gameOver.active = false;
-
-
-
+        gameWin.active = false;
+        blocksHitScore.text = "Score: " + blockDestroyed;
 
     }
 
@@ -75,6 +81,22 @@ public class ballMovement : MonoBehaviour
 
         transform.position = new Vector3(0, 4, 0);
         RB.AddForce(new Vector3(0, -0.3f, 0));
+
+    }
+
+    public void winCondition()
+    {
+        
+        blockDestroyed += 1;
+
+        blocksHitScore.text = "Score: " + blockDestroyed;
+
+        if (blockDestroyed == 84)
+        {
+
+            gameWin.active = true;
+
+        }
 
     }
 
