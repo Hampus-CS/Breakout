@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class gameOverScript : MonoBehaviour
+public class gameMenu : MonoBehaviour
 {
-    
+   
     public void Restart()
     {
 

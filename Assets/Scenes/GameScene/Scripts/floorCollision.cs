@@ -19,8 +19,6 @@ public class floorCollision : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-        Debug.Log("Träff");
-
         GameObject otherGameObject = collision.gameObject;
         ballMovement hitFloor = otherGameObject.GetComponent<ballMovement>();
 
