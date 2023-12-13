@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //HCS
-
 public class MainMenu : MonoBehaviour
 {
 
