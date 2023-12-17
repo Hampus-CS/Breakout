@@ -37,8 +37,8 @@ public class ballMovement : MonoBehaviour
         RB = GetComponent<Rigidbody>();
         transform.position = new Vector3(0, 4, 0);
         RB.AddForce(new Vector3(0, -0.1f, 0));
-        gameOver.active = false;
-        gameWin.active = false;
+        gameOver.SetActive(false);
+        gameWin.SetActive(false);
         blocksHitScore.text = "Score: " + blockDestroyed;
 
     }
@@ -46,7 +46,7 @@ public class ballMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         float speed = 4;
         RB.velocity = RB.velocity.normalized * speed;
 
@@ -74,7 +74,7 @@ public class ballMovement : MonoBehaviour
 
             Destroy(heart1);
             Destroy(gameObject);
-            gameOver.active = true;
+            gameOver.SetActive(true);
 
         }
 
@@ -93,7 +93,7 @@ public class ballMovement : MonoBehaviour
         if (blockDestroyed == 84)
         {
 
-            gameWin.active = true;
+            gameWin.SetActive(true);
 
         }
 
